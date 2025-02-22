@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos - Panorama News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f0ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .video-container {
+            background: #d9e8ff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 45%;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .video-container p {
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .back-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #003d80;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"></a>
+    <header class="header">
+        Panorama News - Vídeos
+    </header>
+    <main>
+        <section class="video-gallery">
+            <div class="video-container">
+                <video controls>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <p>Notícia em vídeo 1</p>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <p>Notícia em vídeo 2</p>
+            </div>
+        </section>
+        <button class="back-button" onclick="window.history.back()">Voltar</button>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Panorama News - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videos = document.querySelectorAll("video");
+            videos.forEach(video => {
+                video.addEventListener("play", function() {
+                    videos.forEach(v => {
+                        if (v !== video) {
+                            v.pause();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
