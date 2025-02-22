@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esportes - Panorama News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f0ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .news-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .news-item {
+            background: #d9e8ff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 45%;
+            text-align: center;
+        }
+        .news-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .news-item h1 {
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .back-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #003d80;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        Panorama News - Esportes
+    </header>
+    <main class="content">
+        <h1>Últimas Notícias de Esportes</h1>
+        <img src="img/esportes-principal.jpg" alt="Imagem principal de esportes">
+        <p>Fique por dentro das novidades do mundo esportivo, competições e destaques.</p>
+        <section class="news-section">
+            <div class="news-item">
+                <img src="img/esportes1.jpg" alt="Notícia de esportes 1">
+                <h1>Campeonato Nacional</h1>
+                <p>Times disputam pelo título em um dos torneios mais aguardados do ano.</p>
+            </div>
+            <div class="news-item">
+                <img src="img/esportes2.jpg" alt="Notícia de esportes 2">
+                <h1>Entrevista com Atleta</h1>
+                <p>Jogador revela bastidores e preparação para as próximas partidas.</p>
+            </div>
+        </section>
+        <button class="back-button" onclick="window.history.back()">Voltar</button>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Panorama News - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
